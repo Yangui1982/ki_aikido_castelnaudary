@@ -1,5 +1,5 @@
 class NouvellesController < ApplicationController
-
+  before_action :set_nouvelle, only: [:edit, :update, :destroy]
 
   def new
     @nouvelle = Nouvelle.new
