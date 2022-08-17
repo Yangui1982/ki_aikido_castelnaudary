@@ -1,6 +1,10 @@
 class NouvellesController < ApplicationController
   before_action :set_nouvelle, only: [:edit, :update, :destroy]
 
+  def index
+    @nouvelles = policy_scope(Nouvelle).order(created_at: :desc)
+  end
+
   def new
     @nouvelle = Nouvelle.new
     authorize @nouvelle
