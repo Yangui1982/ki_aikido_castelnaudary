@@ -1,2 +1,39 @@
 // Import page-specific CSS files here.
 @import "home";
+
+[data-tab-info] {
+  display: none;
+}
+
+.active[data-tab-info] {
+  display: block;
+}
+
+.tab-content {
+  font-size: 25px;
+  font-family: Helvetica;
+}
+
+.tab-content h1 {
+  text-align: center;
+}
+
+.tabs {
+  font-size: 25px;
+  font-family: Helvetica;
+  text-align: center;
+  display: flex;
+  margin: 0;
+}
+
+.tabs span {
+  background: lightgray;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.tabs span:hover {
+  background: gray;
+  cursor: pointer;
+  color: white;
+}

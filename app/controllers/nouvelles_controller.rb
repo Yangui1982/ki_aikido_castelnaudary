@@ -1,5 +1,6 @@
 class NouvellesController < ApplicationController
   before_action :set_nouvelle, only: [:edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @nouvelles = policy_scope(Nouvelle).order(created_at: :desc)

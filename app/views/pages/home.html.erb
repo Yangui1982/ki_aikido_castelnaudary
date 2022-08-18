@@ -1,33 +1,33 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/banner.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('banner.jpg') %>)">
       <div class="description">
         <h1>Ki Aïkido Castelnaudary</h1>
         <p>Ki No Kenkyukaï Musubi (école qui remplace le Ki No Kenkyukaï International fondée par le Doshu Kenjiro Yoshigasaki décédé) du Style Shinshin Toïtsu Aïkido ou Aïkido avec coordination de l'esprit et du corps ou plus simplement Ki Aïkido ("Style" fondée par Koïchi Toheï senseï)</p>
       </div>
-      <%= link_to 'En savoir plus !', castles_path, class:'btn btn-primary' %>
+      <%= link_to 'En savoir plus !', nouvelles_path, class:'btn btn-primary' %>
     </div>
 
     <div class="container">
       <div class="cards">
         <div class="card">
-          <img src="images/100_0815.jpg" alt="picture description" width="402.67" class="img_card">
+          <img src= <%= asset_path('100_0815.jpg')%> alt="picture description" width="402.67" class="img_card">
           <h2>Respiration</h2>
           <p>La respiration est un élément <strong>très important</strong> dans la pratique de l'Aïkido</p>
         </div>
 
         <div class="card">
-          <img src="images/100_0797.jpg" alt="picture description" width="402.67" class="img_card">
+          <img src= <%= asset_path('100_0797.jpg')%> alt="picture description" width="402.67" class="img_card">
           <h2>Relaxation</h2>
           <p>Un corps relaxé est plus <strong> efficace et fluide</strong> dans ses mouvements</p>
         </div>
 
         <div class="card">
-          <img src="images/100_0554.jpg" alt="picture description" width="402.67" class="img_card">
+          <img src= <%= asset_path('100_0554.jpg')%> alt="picture description" width="402.67" class="img_card">
           <h2>Coordination</h2>
           <p>La coordination du corps et de l'esprit est  <strong>essentielle</strong> dans la pratique de l'Aïkido</p>
         </div>
 
         <div class="card">
-          <img src="images/100_0569.jpg" alt="picture description" width="402.67" class="img_card">
+          <img src= <%= asset_path('100_0569.jpg')%> alt="picture description" width="402.67" class="img_card">
           <h2>Unification</h2>
           <p><strong>L'esprit</strong> bouge le corps</p>
         </div>
