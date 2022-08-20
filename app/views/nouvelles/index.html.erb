@@ -1,3 +1,9 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('banner.jpg') %>)">
+  <div class="description">
+    <h1>Ki Aïkido Castelnaudary</h1>
+    <p>Ki No Kenkyukaï Musubi (école qui remplace le Ki No Kenkyukaï International fondée par le Doshu Kenjiro Yoshigasaki décédé) du Style Shinshin Toïtsu Aïkido ou Aïkido avec coordination de l'esprit et du corps ou plus simplement Ki Aïkido ("Style" fondée par Koïchi Toheï senseï)</p>
+  </div>
+</div>
 <div class="tabs">
       <span data-tab-value="#tab_1">Accueil</span>
       <span data-tab-value="#tab_2">Qui sommes nous ?</span>
@@ -11,7 +17,7 @@
           <br>
           <div class="news">
             <p><% @nouvelles.each do |nouvelle| %>
-              <%= nouvelle.created_at %>
+              <%= nouvelle.created_at.strftime("%d-%m-%Y") %>
               <%= nouvelle.comment %>
               <% if policy(nouvelle).destroy? %>
               <%= link_to nouvelle_path, class: 'trash',
@@ -19,6 +25,9 @@
                 data: { confirm: "Are you sure?" } do%>
                 <i class="fa-regular fa-trash-can"></i>
                 <% end %>
+              <% end %>
+              <% if policy(nouvelle).create? %>
+              <%= link_to "Créez une Nouvelle", new_nouvelle_path %>
               <% end %>
             <% end %> </p>
           </div>
