@@ -10,7 +10,7 @@ class NouvellePolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user
+    true
   end
 
   def show?

@@ -4,6 +4,8 @@ class NouvellesController < ApplicationController
 
   def index
     @nouvelles = policy_scope(Nouvelle).order(created_at: :desc)
+    @nouvelle = Nouvelle.new
+    authorize @nouvelle
   end
 
   def new

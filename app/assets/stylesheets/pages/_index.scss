@@ -1,5 +1,101 @@
 // Import page-specific CSS files here.
-@import "home";
+.banner{
+  text-align: center;
+  background-size: cover;
+  background-position: bottom;
+  padding: 180px 0;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.banner p {
+  color: white;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.card h2 {
+  font-family: Courier;
+  text-align: center;
+  color: black;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.cards {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card{
+  display: inline;
+  width: auto;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.card p{
+  color: green;
+  font-size: 25px;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+.description{
+  margin-bottom: 100px;
+}
+
+
+
+.img_card {
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+#footer{
+  padding: 30px;
+  background: rgb(30, 30, 30);
+  color: lightgrey;
+}
+
+#footer a {
+  color: lightgrey;
+  font-size: 15px;
+}
+#footer a:hover {
+  color: white;
+}
 
 [data-tab-info] {
   display: none;
@@ -24,6 +120,9 @@
   text-align: center;
   display: flex;
   margin: 0;
+  justify-content: space-around;
+  background: lightgray;
+  border: solid 1px lightgray;
 }
 
 .tabs span {
@@ -35,5 +134,17 @@
 .tabs span:hover {
   background: gray;
   cursor: pointer;
+  color: white;
+}
+
+.content {
+  margin: 30px;
+}
+
+span {
+  border-style: none;
+}
+
+.log a{
   color: white;
 }

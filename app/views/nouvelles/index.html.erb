@@ -4,63 +4,118 @@
     <p>Ki No Kenkyukaï Musubi (école qui remplace le Ki No Kenkyukaï International fondée par le Doshu Kenjiro Yoshigasaki décédé) du Style Shinshin Toïtsu Aïkido ou Aïkido avec coordination de l'esprit et du corps ou plus simplement Ki Aïkido ("Style" fondée par Koïchi Toheï senseï)</p>
   </div>
 </div>
+<div class="log">
+  <div class="login">
+    <%= link_to "login", new_user_session_path %>
+  </div>
+  <div class='logout'>
+    <%= link_to destroy_user_session_path, method: :delete, class: "out-btn" do%>
+    <i class="fa-solid fa-circle-xmark"></i>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <div class="card">
+      <img src= <%= asset_path('100_0815.jpg')%> alt="picture description" width="402.67" class="img_card">
+      <h2>Respiration</h2>
+      <p>La respiration est un élément <strong>très important</strong> dans la pratique de l'Aïkido</p>
+    </div>
+
+    <div class="card">
+      <img src= <%= asset_path('100_0797.jpg')%> alt="picture description" width="402.67" class="img_card">
+      <h2>Relaxation</h2>
+      <p>Un corps relaxé est plus <strong> efficace et fluide</strong> dans ses mouvements</p>
+    </div>
+
+    <div class="card">
+      <img src= <%= asset_path('100_0554.jpg')%> alt="picture description" width="402.67" class="img_card">
+      <h2>Coordination</h2>
+      <p>La coordination du corps et de l'esprit est  <strong>essentielle</strong> dans la pratique de l'Aïkido</p>
+    </div>
+
+    <div class="card">
+      <img src= <%= asset_path('100_0569.jpg')%> alt="picture description" width="402.67" class="img_card">
+      <h2>Unification</h2>
+      <p><strong>L'esprit</strong> bouge le corps</p>
+    </div>
+  </div>
+</div>
 <div class="tabs">
       <span data-tab-value="#tab_1">Accueil</span>
       <span data-tab-value="#tab_2">Qui sommes nous ?</span>
       <span data-tab-value="#tab_3">La pratique/L'enseignement</span>
-    </div>
+      <span data-tab-value="#tab_4">Informations pratiques</span>
+      <span data-tab-value="#tab_5">Articles</span>
+      <span data-tab-value="#tab_6">Bibliographie</span>
+      <span data-tab-value="#tab_7">Media</span>
 
-    <div class="tab-content">
-        <div class="tabs__tab active" id="tab_1" data-tab-info>
-          <h1>News</h1>
-          <br>
-          <br>
-          <div class="news">
-            <p><% @nouvelles.each do |nouvelle| %>
-              <%= nouvelle.created_at.strftime("%d-%m-%Y") %>
-              <%= nouvelle.comment %>
-              <% if policy(nouvelle).destroy? %>
-              <%= link_to nouvelle_path, class: 'trash',
+</div>
+<div class="tab-content">
+    <div class="tabs__tab active" id="tab_1" data-tab-info>
+      <div class="content">
+        <h1>News</h1>
+        <br>
+        <div class="news">
+          <p><% @nouvelles.each do |nouvelle| %>
+            <%= nouvelle.created_at.strftime("%d-%m-%Y") %>
+            <%= nouvelle.comment %>
+            <% if policy(nouvelle).destroy? %>
+              <%= link_to nouvelle_path(nouvelle), class: 'trash',
                 method: :delete,
                 data: { confirm: "Are you sure?" } do%>
                 <i class="fa-regular fa-trash-can"></i>
                 <% end %>
+            <% end %>
+            <% if policy(nouvelle).create? %>
+              <%= link_to new_nouvelle_path, class: 'add' do%>
+                <i class="fa-solid fa-plus"></i>
               <% end %>
-              <% if policy(nouvelle).create? %>
-              <%= link_to "Créez une Nouvelle", new_nouvelle_path %>
-              <% end %>
-            <% end %> </p>
-          </div>
+            <% end %>
+          <% end %> </p>
         </div>
-        <br>
-        <div class="tabs__tab" id="tab_2" data-tab-info>
-          <h1>Qui sommes nous ?</h1>
-          <br>
-          <br>
-          <p>
-            Le Ki Aikido du Sud Est/Sports pour Tous a été affiliée à sa création (1982) au Ki No Kenkyukaï de Tokyo de maître Koïchi Toheï.
-            Le Ki No Kenkyukaï (qui peut se traduire par "Académie d'étude du ki", "société d'étude du ki" et que l'on traduit par "Ki Société") a été fondé en 1971 par Koïchi Toheï.
-            Aujourd'hui, nous sommes affiliés Ki No Kenkyukaï Musubi, nous participons au Fonds de Solidarité Européen d'Aïkido et, enfin, depuis septembre 2012 nous sommes affiliés à la fédération omnisports Fédération Française Sports pour Tous.
-          </p>
-        </div>
-        <div class="tabs__tab" id="tab_3" data-tab-info>
-            <p>Learn cool stuff.</p>
-
-        </div>
+      </div>
     </div>
-    <script type="text/javascript">
-        const tabs = document.querySelectorAll('[data-tab-value]')
-        const tabInfos = document.querySelectorAll('[data-tab-info]')
+    <br>
+    <div class="tabs__tab" id="tab_2" data-tab-info>
+      <div class="content">
+        <h1>Qui sommes nous ?</h1>
+        <br>
+        <br>
+        <p>
+          Le Ki Aikido du Sud Est/Sports pour Tous a été affiliée à sa création (1982) au Ki No Kenkyukaï de Tokyo de maître Koïchi Toheï.
+          Le Ki No Kenkyukaï (qui peut se traduire par "Académie d'étude du ki", "société d'étude du ki" et que l'on traduit par "Ki Société") a été fondé en 1971 par Koïchi Toheï.
+          Aujourd'hui, nous sommes affiliés Ki No Kenkyukaï Musubi, nous participons au Fonds de Solidarité Européen d'Aïkido et, enfin, depuis septembre 2012 nous sommes affiliés à la fédération omnisports Fédération Française Sports pour Tous.
+        </p>
+      </div>
+    </div>
+    <div class="tabs__tab" id="tab_3" data-tab-info>
+      <div class="content">
+        <p>Learn cool stuff.</p>
+      </div>
+    </div>
+</div>
+<div id="footer">
+  <p>Vous pouvez nous trouver sur</p>
+  <ul class="list-inline">
+    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+  </ul>
+</div>
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const target = document
-                    .querySelector(tab.dataset.tabValue);
+<script type="text/javascript">
+    const tabs = document.querySelectorAll('[data-tab-value]')
+    const tabInfos = document.querySelectorAll('[data-tab-info]')
 
-                tabInfos.forEach(tabInfo => {
-                    tabInfo.classList.remove('active')
-                })
-                target.classList.add('active');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = document
+                .querySelector(tab.dataset.tabValue);
+
+            tabInfos.forEach(tabInfo => {
+                tabInfo.classList.remove('active')
             })
+            target.classList.add('active');
         })
-    </script>
+    })
+</script>
