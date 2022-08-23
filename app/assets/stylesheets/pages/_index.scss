@@ -125,13 +125,12 @@
   border: solid 1px lightgray;
 }
 
-.tabs span {
+.onglet {
   background: lightgray;
   padding: 10px;
-  border: 1px solid rgb(255, 255, 255);
 }
 
-.tabs span:hover {
+.onglet:hover {
   background: gray;
   cursor: pointer;
   color: white;
@@ -141,10 +140,9 @@
   margin: 30px;
 }
 
-span {
-  border-style: none;
-}
-
 .log a{
   color: white;
 }
+ ul {
+   list-style: none;
+ }

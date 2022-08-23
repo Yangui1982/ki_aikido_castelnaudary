@@ -42,13 +42,13 @@
   </div>
 </div>
 <div class="tabs">
-      <span data-tab-value="#tab_1">Accueil</span>
-      <span data-tab-value="#tab_2">Qui sommes nous ?</span>
-      <span data-tab-value="#tab_3">La pratique/L'enseignement</span>
-      <span data-tab-value="#tab_4">Informations pratiques</span>
-      <span data-tab-value="#tab_5">Articles</span>
-      <span data-tab-value="#tab_6">Bibliographie</span>
-      <span data-tab-value="#tab_7">Media</span>
+      <div class="onglet" data-tab-value="#tab_1">Accueil</div>
+      <div class="onglet" data-tab-value="#tab_2">Qui sommes nous ?</div>
+      <div class="onglet" data-tab-value="#tab_3">La pratique/L'enseignement</div>
+      <div class="onglet" data-tab-value="#tab_4">Informations pratiques</div>
+      <div class="onglet" data-tab-value="#tab_5">Articles</div>
+      <div class="onglet" data-tab-value="#tab_6">Bibliographie</div>
+      <div class="onglet" data-tab-value="#tab_7">Media</div>
 
 </div>
 <div class="tab-content">
@@ -57,22 +57,26 @@
         <h1>News</h1>
         <br>
         <div class="news">
-          <p><% @nouvelles.each do |nouvelle| %>
-            <%= nouvelle.created_at.strftime("%d-%m-%Y") %>
-            <%= nouvelle.comment %>
-            <% if policy(nouvelle).destroy? %>
-              <%= link_to nouvelle_path(nouvelle), class: 'trash',
-                method: :delete,
-                data: { confirm: "Are you sure?" } do%>
-                <i class="fa-regular fa-trash-can"></i>
+          <ul>
+          <% @nouvelles.each do |nouvelle| %>
+            <li><%= nouvelle.created_at.strftime("%d-%m-%Y")  %>
+                <%= ': ' %>
+                <%= nouvelle.comment %>
+                <% if policy(nouvelle).destroy? %>
+                  <%= link_to nouvelle_path(nouvelle), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
                 <% end %>
+            </li>
+          <% end %>
+          </ul>
+          <% if user_session %>
+            <%= link_to new_nouvelle_path, class: 'add' do%>
+              <i class="fa-solid fa-plus"></i>
             <% end %>
-            <% if policy(nouvelle).create? %>
-              <%= link_to new_nouvelle_path, class: 'add' do%>
-                <i class="fa-solid fa-plus"></i>
-              <% end %>
-            <% end %>
-          <% end %> </p>
+          <% end %>
         </div>
       </div>
     </div>
