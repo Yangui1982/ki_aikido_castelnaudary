@@ -41,63 +41,65 @@
     </div>
   </div>
 </div>
-<div class="tabs">
-      <div class="onglet" data-tab-value="#tab_1">Accueil</div>
-      <div class="onglet" data-tab-value="#tab_2">Qui sommes nous ?</div>
-      <div class="onglet" data-tab-value="#tab_3">La pratique/L'enseignement</div>
-      <div class="onglet" data-tab-value="#tab_4">Informations pratiques</div>
-      <div class="onglet" data-tab-value="#tab_5">Articles</div>
-      <div class="onglet" data-tab-value="#tab_6">Bibliographie</div>
-      <div class="onglet" data-tab-value="#tab_7">Media</div>
+<div class="marge">
+  <div class="tabs">
+        <div class="onglet" data-tab-value="#tab_1">Accueil</div>
+        <div class="onglet" data-tab-value="#tab_2">Qui sommes nous ?</div>
+        <div class="onglet" data-tab-value="#tab_3">La pratique/L'enseignement</div>
+        <div class="onglet" data-tab-value="#tab_4">Informations pratiques</div>
+        <div class="onglet" data-tab-value="#tab_5">Articles</div>
+        <div class="onglet" data-tab-value="#tab_6">Bibliographie</div>
+        <div class="onglet" data-tab-value="#tab_7">Media</div>
 
-</div>
-<div class="tab-content">
-    <div class="tabs__tab active" id="tab_1" data-tab-info>
-      <div class="content">
-        <h1>News</h1>
-        <br>
-        <div class="news">
-          <ul>
-          <% @nouvelles.each do |nouvelle| %>
-            <li><%= nouvelle.created_at.strftime("%d-%m-%Y")  %>
-                <%= ': ' %>
-                <%= nouvelle.comment %>
-                <% if policy(nouvelle).destroy? %>
-                  <%= link_to nouvelle_path(nouvelle), class: 'trash',
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } do%>
-                    <i class="fa-regular fa-trash-can"></i>
-                    <% end %>
-                <% end %>
-            </li>
-          <% end %>
-          </ul>
-          <% if user_session %>
-            <%= link_to new_nouvelle_path, class: 'add' do%>
-              <i class="fa-solid fa-plus"></i>
+  </div>
+  <div class="tab-content">
+      <div class="tabs__tab active" id="tab_1" data-tab-info>
+        <div class="content">
+          <h1>News</h1>
+          <br>
+          <div class="news">
+            <ul>
+            <% @nouvelles.each do |nouvelle| %>
+              <li><%= nouvelle.created_at.strftime("%d-%m-%Y")  %>
+                  <%= ': ' %>
+                  <%= nouvelle.comment %>
+                  <% if policy(nouvelle).destroy? %>
+                    <%= link_to nouvelle_path(nouvelle), class: 'trash',
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } do%>
+                      <i class="fa-regular fa-trash-can"></i>
+                      <% end %>
+                  <% end %>
+              </li>
             <% end %>
-          <% end %>
+            </ul>
+            <% if user_session %>
+              <%= link_to new_nouvelle_path, class: 'add' do%>
+                <i class="fa-solid fa-plus"></i>
+              <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-    <br>
-    <div class="tabs__tab" id="tab_2" data-tab-info>
-      <div class="content">
-        <h1>Qui sommes nous ?</h1>
-        <br>
-        <br>
-        <p>
-          Le Ki Aikido du Sud Est/Sports pour Tous a été affiliée à sa création (1982) au Ki No Kenkyukaï de Tokyo de maître Koïchi Toheï.
-          Le Ki No Kenkyukaï (qui peut se traduire par "Académie d'étude du ki", "société d'étude du ki" et que l'on traduit par "Ki Société") a été fondé en 1971 par Koïchi Toheï.
-          Aujourd'hui, nous sommes affiliés Ki No Kenkyukaï Musubi, nous participons au Fonds de Solidarité Européen d'Aïkido et, enfin, depuis septembre 2012 nous sommes affiliés à la fédération omnisports Fédération Française Sports pour Tous.
-        </p>
+      <br>
+      <div class="tabs__tab" id="tab_2" data-tab-info>
+        <div class="content">
+          <h1>Qui sommes nous ?</h1>
+          <br>
+          <br>
+          <p>
+            Le Ki Aikido du Sud Est/Sports pour Tous a été affiliée à sa création (1982) au Ki No Kenkyukaï de Tokyo de maître Koïchi Toheï.
+            Le Ki No Kenkyukaï (qui peut se traduire par "Académie d'étude du ki", "société d'étude du ki" et que l'on traduit par "Ki Société") a été fondé en 1971 par Koïchi Toheï.
+            Aujourd'hui, nous sommes affiliés Ki No Kenkyukaï Musubi, nous participons au Fonds de Solidarité Européen d'Aïkido et, enfin, depuis septembre 2012 nous sommes affiliés à la fédération omnisports Fédération Française Sports pour Tous.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="tabs__tab" id="tab_3" data-tab-info>
-      <div class="content">
-        <p>Learn cool stuff.</p>
+      <div class="tabs__tab" id="tab_3" data-tab-info>
+        <div class="content">
+          <p>Learn cool stuff.</p>
+        </div>
       </div>
-    </div>
+  </div>
 </div>
 <div id="footer">
   <p>Vous pouvez nous trouver sur</p>
