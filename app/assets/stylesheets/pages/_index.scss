@@ -178,7 +178,22 @@
   align-items: center;
 }
 
-.card-product img {
+.card-product2 img {
+  height: 100%;
+  width: 230px;
+  object-fit: cover;
+  margin-right: 35px;
+}
+
+.card-product3 {
+  margin-left: 35px;
+  overflow: hidden;
+  height: 269px;
+  display: flex;
+  align-items: center;
+}
+
+.card-product3 img {
   height: 100%;
   width: 188px;
   object-fit: cover;
