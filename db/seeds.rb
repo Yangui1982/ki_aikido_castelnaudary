@@ -15,7 +15,7 @@ user = User.create!(
 )
 
 Nouvelle.create!(
-  comment: "Ouverture en septembre du Dojo de Ki Aïkido à Castelnaudary.
+  comment: "Ouverture en septembre du Dojo de Ki Aïkido à Castelnaudary le 20/09/2022.
             Les cours débuteront à 19h30 et dureront jusqu'à 21h30.
             Les deux premiers cours sont gratuits.",
   user: user
