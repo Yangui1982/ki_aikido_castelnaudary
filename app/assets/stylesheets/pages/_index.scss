@@ -62,7 +62,11 @@
   margin-top : 300px;
 }
 
-
+.log {
+  background-color: lightgray;
+  color: lightgray;
+  width: 5px;
+}
 
 .img_card {
   background-size: cover;
@@ -103,15 +107,20 @@
   text-align: center;
 }
 
+.tab-content h2 {
+  text-align: center;
+}
+
 .tabs {
   font-size: 25px;
   font-family: Helvetica;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
   background: lightgray;
   border: solid 1px lightgray;
+  padding-right: 70px;
 }
 
 .onglet {
@@ -132,7 +141,8 @@
 }
 
 .log a{
-  color: white;
+  color: lightgray;
+  font-size: 5px;
 }
  ul {
   list-style: none;
