@@ -1,9 +1,10 @@
 // Import page-specific CSS files here.
 .banner{
+  height: fit-content;
   text-align:center;
   background-size: cover;
   background-position: bottom;
-  padding: 180px 0;
+  padding: 20px 0;
   color: white;
   text-shadow: 1px 1px 5px black;
 }
@@ -79,6 +80,14 @@
   padding: 30px;
   background: rgb(30, 30, 30);
   color: lightgrey;
+}
+
+#footer h4{
+  text-align: center;
+}
+
+#footer p {
+  text-align: center;
 }
 
 #footer a {

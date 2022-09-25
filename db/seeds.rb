@@ -6,17 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Nouvelle.destroy_all
 User.destroy_all
 
-user = User.create!(
+User.create!(
   email: 'admin@admin.com',
-  password: 'azerty'
-)
-
-Nouvelle.create!(
-  comment: "Ouverture en septembre du Dojo de Ki Aïkido à Castelnaudary le 20/09/2022.
-            Les cours débuteront à 19h30 et dureront jusqu'à 21h30.
-            Les deux premiers cours sont gratuits.",
-  user: user
+  password: 'T1r2u3s4t5n6o718!'
 )
