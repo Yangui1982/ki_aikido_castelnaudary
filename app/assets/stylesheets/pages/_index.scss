@@ -2,21 +2,23 @@
 .banner{
   height: fit-content;
   text-align:center;
-  background-size: cover;
+  background-size: contain;
   background-position: bottom;
-  padding: 20px 0;
+  background-repeat: no-repeat;
+  background-color: #0F1B46;
+  padding: 50px 0;
   color: white;
   text-shadow: 1px 1px 5px black;
 }
 
-.banner h1 {
+.banner h2 {
   color: white;
   font-size: 50px;
 }
 
 .banner p {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: lighter;
 }
 
@@ -61,6 +63,8 @@
 
 .description{
   margin-top : 300px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .log {
@@ -107,9 +111,12 @@
 }
 
 .tab-content {
+  margin: 50px;
   font-size: 25px;
   font-family: Helvetica;
   background-color: #FEF6E4;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .tab-content h1 {
