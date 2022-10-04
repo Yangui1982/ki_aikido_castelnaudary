@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/info";
+@import "pages/about";
+@import "pages/enseignement";
+
+body {
+  background-color: whitesmoke;
+  margin: 0px 0 0 0;
+  display: block;
+}
+
+.warning {
+  text-align: center;
+}

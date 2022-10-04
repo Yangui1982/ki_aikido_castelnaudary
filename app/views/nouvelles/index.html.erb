@@ -1,12 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('baniere.jpg') %>)">
-  <div class="description">
-    <h2>Ki Aïkido Castelnaudary</h2>
-    <p>Ki No Kenkyukaï Musubi (école qui remplace le Ki No Kenkyukaï International fondée par le Doshu Kenjiro Yoshigasaki décédé) du Style Shinshin Toïtsu Aïkido ou Aïkido avec coordination de l'esprit et du corps ou plus simplement Ki Aïkido ("Style" fondée par Koïchi Toheï senseï)</p>
-  </div>
-</div>
-
-
-<div class="tabs">
+<div class="content">
   <div class="log">
     <div class="login">
       <%= link_to "login", new_user_session_path %>
@@ -17,257 +9,79 @@
       <% end %>
     </div>
   </div>
-  <div class="onglet" data-tab-value="#tab_1">Accueil</div>
-  <div class="onglet" data-tab-value="#tab_2">Qui sommes nous ?</div>
-  <div class="onglet" data-tab-value="#tab_3">L'enseignement</div>
-  <div class="onglet" data-tab-value="#tab_4">Informations pratiques</div>
-  <div class="onglet" data-tab-value="#tab_5">Articles</div>
-  <div class="onglet" data-tab-value="#tab_6">Bibliographie</div>
-  <div class="onglet" data-tab-value="#tab_7">Media</div>
-</div>
-<div class="tab-content">
-  <div class="tabs__tab active" id="tab_1" data-tab-info>
-    <div class="content">
-      <h1>Accueil</h1>
-      <div class="container">
-        <div class="cards">
-          <div class="card">
-            <img src= <%= asset_path('100_0815.jpg')%> alt="picture description" width="350" class="img_card">
-            <h2>Respiration</h2>
-            <p>La respiration est un élément <strong>très important</strong> dans la pratique de l'Aïkido</p>
-          </div>
-
-          <div class="card">
-            <img src= <%= asset_path('100_0797.jpg')%> alt="picture description" width="350" class="img_card">
-            <h2>Relaxation</h2>
-            <p>Un corps relaxé est plus <strong> efficace et fluide</strong> dans ses mouvements</p>
-          </div>
-
-          <div class="card">
-            <img src= <%= asset_path('100_0554.jpg')%> alt="picture description" width="350" class="img_card">
-            <h2>Coordination</h2>
-            <p>La coordination du corps et de l'esprit est  <strong>essentielle</strong> dans la pratique de l'Aïkido</p>
-          </div>
-
-          <div class="card">
-            <img src= <%= asset_path('100_0569.jpg')%> alt="picture description" width="350" class="img_card">
-            <h2>Unification</h2>
-            <p><strong>L'esprit</strong> bouge le corps</p>
-          </div>
-        </div>
+  <h1>Accueil</h1>
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <img src= <%= asset_path('100_0815.jpg')%> alt="picture description" width="320" class="img_card">
+        <h2>Respiration</h2>
+        <p>La respiration est un élément <strong>très important</strong> dans la pratique de l'Aïkido</p>
       </div>
-      <br>
-      <div class="news">
-        <h1>News</h1>
-        <br>
-        <ul>
-        <% @nouvelles.each do |nouvelle| %>
-          <li><%= nouvelle.created_at.strftime("%d-%m-%Y")  %>
-              <%= ': ' %>
-              <%= nouvelle.comment %>
-              <% if policy(nouvelle).destroy? %>
-                <%= link_to nouvelle_path(nouvelle), class: 'trash',
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } do%>
-                  <i class="fa-regular fa-trash-can"></i>
-                  <% end %>
+
+      <div class="card">
+        <img src= <%= asset_path('100_0797.jpg')%> alt="picture description" width="320" class="img_card">
+        <h2>Relaxation</h2>
+        <p>Un corps relaxé est plus <strong> efficace et fluide</strong> dans ses mouvements</p>
+      </div>
+
+      <div class="card">
+        <img src= <%= asset_path('100_0554.jpg')%> alt="picture description" width="320" class="img_card">
+        <h2>Coordination</h2>
+        <p>La coordination du corps et de l'esprit est  <strong>essentielle</strong> dans la pratique de l'Aïkido</p>
+      </div>
+
+      <div class="card">
+        <img src= <%= asset_path('100_0569.jpg')%> alt="picture description" width="320" class="img_card">
+        <h2>Unification</h2>
+        <p><strong>L'esprit</strong> bouge le corps</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="news">
+    <h2>News</h2>
+    <br>
+    <ul>
+      <% @nouvelles.each do |nouvelle| %>
+      <li><%= nouvelle.created_at.strftime("%d-%m-%Y")  %>
+          <%= ': ' %>
+          <%= nouvelle.comment %>
+          <% if policy(nouvelle).destroy? %>
+            <%= link_to nouvelle_path(nouvelle), class: 'trash',
+              method: :delete,
+              data: { confirm: "Are you sure?" } do%>
+              <i class="fa-regular fa-trash-can"></i>
               <% end %>
-          </li>
-          <br>
-        <% end %>
-          <li>20/08/2022 : Ouverture en septembre du Dojo de Ki Aïkido à Castelnaudary le 15/09/2022.
-          Le cours débutera à 20h30 et dureront jusqu'à 22h30.
-          Les deux premiers cours sont gratuits.</li>
-          <br>
-          <li>12-02-2021 : Nous avons la tristesse d'annoncer le décès du Doshu Senseï Yoshigasaki.</li>
-        </ul>
-        <% if user_session %>
-          <%= link_to new_nouvelle_path, class: 'add' do%>
-            <i class="fa-solid fa-plus"></i>
           <% end %>
-        <% end %>
-        <br>
-        <div class="card-product2">
-          <img src=<%= asset_path('ki.gif')%> alt="picture description" width="189" class="img_card"/>
-          <div class="card-product-infos">
-            <p><strong>Ecole :</strong></p>
-            <p>Ki No Kenkyukaï  Musubi (école qui remplace le Ki No Kenkyukaï International fondée par le Doshu Kenjiro Yoshigasaki décédé)</p>
-            <p><strong>Style :</strong></p>
-            <p>Shinshin Toïtsu Aïkido ou Aïkido avec coordination de l'esprit et du corps ou plus simplement Ki Aïkido ("Style" fondée par Koïchi Toheï senseï)</p>
-          </div>
-        </div>
-        <br>
+      </li>
+      <br>
+      <% end %>
+      <li>20/08/2022 : Ouverture en septembre du Dojo de Ki Aïkido à Castelnaudary le 15/09/2022.
+      Le cours débutera à 20h30 et dureront jusqu'à 22h30.
+      Les deux premiers cours sont gratuits.</li>
+      <br>
+    </ul>
+    <% if user_session %>
+      <%= link_to new_nouvelle_path, class: 'add' do%>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
+    <% end %>
+    <br>
+    <div class="card-product2">
+      <img src=<%= asset_path('ki.gif')%> alt="picture description" width="189" class="img_card"/>
+      <div class="card-product-infos">
+        <p>Shinshin Toïtsu Aïkido ou Aïkido avec coordination de l'esprit et du corps ou plus simplement Ki Aïkido ("Style" fondée par Koïchi Toheï senseï)</p>
       </div>
     </div>
+    <br>
   </div>
-
-  <div class="tabs__tab" id="tab_2" data-tab-info>
-    <div class="content">
-      <h1>Qui sommes nous ?</h1>
-      <br>
-      <ul>
-        <li>Le Ki Aikido du Sud Est/Sports pour Tous a été affiliée à sa création (1982) au Ki No Kenkyukaï de Tokyo de maître Koïchi Toheï.</li>
-        <br>
-        <li>Le Ki No Kenkyukaï (qui peut se traduire par "Académie d'étude du ki", "Société d'étude du ki" et que l'on traduit par "Ki Société") a été fondé en 1971 par Koïchi Toheï.</li>
-        <br>
-        <li>Aujourd'hui, nous sommes affiliés Ki No Kenkyukaï Musubi, nous participons au Fonds de Solidarité Européen d'Aïkido et, enfin, depuis septembre 2012 nous sommes affiliés à la fédération omnisports Fédération Française Sports pour Tous.</li>
-      </ul>
-      <br>
-      <div class="text">
-        <p>Un peu d'histoire :</p>
-        <br>
-      </div>
-      <div class="card-product3">
-        <img src=<%= asset_path('tohei2.png')%> alt="picture description" width="189" class="img_card"/>
-        <div class="card-product-infos">
-          <p>Maître Ueshiba, le fondateur de l'aïkido décerna de son vivant à Koïchi Toheï le 10ème Dan. Cela représentait à l'époque, le plus haut grade. Mais les idées originales de Toheï senseï et son approche de l'enseignement du Ki l'ont marginalisé au sein le l'Aïkaï de Tokyo fondé par le maître Ueshiba.
-            A la mort de Ueshiba, évincé de l'Aïkikaï par, entre-autres, le propre fils de Ueshiba, il décide de fonder son école : le Ki No Kenkyukaï de Tokyo.</p>
-          <br>
-          <p>Koïchi Toheï (debout) avec le Maître Ueshiba</p>
-        </div>
-      </div>
-      <br>
-      <div class="card-product4">
-        <img src=<%= asset_path('Yoshigasaki-Kenjiro-01.jpg')%> alt="picture description" width="189" class="img_card"/>
-        <div class="card-product-infos">
-          <p><strong>Yoshigasaki Senseï</strong> est arrivé en Europe en 1977 afin d'y représenter officiellement le Ki No Kenkyukaï de Tokyo (Ecole de maître Toheï).
-              Il a permis l'éclosion de nombreux dojos dans toute l'Europe. Il donnait de nombreux stages dont un par an à Marseille.
-              En 2002  Toheï senseï cesse d'enseigner, son fils prend sa succession. Maître Yoshigasaki fonde alors sa propre école, le Ki No Kenkyukaï International.
-          </p>
-        </div>
-      </div>
-      <br>
-      <div class="text">
-        <p><strong>Portrait :</strong></p>
-        <p>Doshu (on peut traduire par le fondateur de notre école, plus précisément le maître de la voie), Kenjiro Yoshigasaki  est né en 1951 à Kagoshima, Japon. Décédé le 13 février 2021.
-          Il commença à pratiquer le yoga quand il eut 10 ans.
-          Par la suite, il débuta l'Aïkido et bien d'autres arts martiaux. Il a aussi étudié le Bouddhisme Zen, le nouveau Shintoïsme, le catholicisme et l'islam.
-          Il a consacré un an à l'étude du yoga en Inde en 1971.
-          En 1973 il est devenu  instructeur d'Aïkido.
-          Il a enseigné le Ki et l'Aïkido en Europe depuis 1977, il s'occupait de plus de 120 dojos (dont 4 en France) et de 4000 pratiquants en Europe, Amérique du sud et Afrique du sud.</p>
-      </div>
-      <br>
-    </div>
-  </div>
-  <div class="tabs__tab" id="tab_3" data-tab-info>
-    <div class="content">
-      <h1>L'enseignement</h1>
-      <br>
-      <div class="text">
-        <p>Généralités :</p>
-        <p>Koïchi Toheï rencontra Moriheï Ueshiba (le fondateur de l'aïkido) à l'age de 19 ans en 1939, il fut frappé par la facilité d'exécution et la puissance qui se dégageait des techniques de Moriheï Ueshiba.</p>
-        <p>Il suivit aussitôt son enseignement. Il progressa rapidement et devint chef instructeur de l'Aïkikaï (nom officiel de l'école d'aïkido de Moriheï Ueshiba).</p>
-        <br>
-        <div class="card-product">
-          <img src=<%= asset_path('tempu.jpg')%> alt="picture description" width="189" class="img_card"/>
-          <div class="card-product-infos">
-            <p>D'autres expériences furent importantes pour Tohei senseï comme sa pratique du Misogi de l'école Ichikukaï, le zazen,et surtout sa rencontre avec Tempu Nakamura.</p>
-          </div>
-        </div>
-        <br>
-        <p>C'est sous l'angle des concepts de relaxation, de coordination du corps et de l'esprit, et de "l'Esprit" qui bouge le corps, qu'il chercha la source de l'incroyable efficacité d'Ueshiba senseï. Il revisita, alors, entièrement sa pratique de l'aïkido.</p>
-        <br>
-        <p>En 1971, Tohei senseï décida de fonder le Ki no Kenkyukaï de Tokyo pour pouvoir enseigner la pratique du ki qui n'était pas enseigné au sein de l'Aïkikaï d'Ueshiba senseï.</p>
-        <br>
-        <p>En 1974, suite à des problèmes à l'Aïkikaï concernant sa pratique de l'aïkido (fondée sur l'étude du Ki), il quitta cette école et il introduisit au sein du Ki No Kenkyukaï de Tokyo l'étude de l'aïkido (qu'il appellera Shinshin Toïtsu aïkido).</p>
-        <br>
-        <p>En 1977, Toheï senseï mandate Yoshigasaki senseï pour enseigner le Shinshin Toïtsu aïkido et représenter le Ki No Kenkyukaï de Tokyo en Europe.</p>
-        <br>
-        <p>En 2002, Toheï senseï cesse d'enseigner, son fils prend sa succession. Maître Yoshigasaki fonde alors sa propre école, le Ki No Kenkyukaï International.</p>
-        <br>
-        <p>Les différentes disciplines pratiquées au sein du Ki no Kenkyukaï International peuvent être regroupées dans deux domaines :</p>
-        <p>- Aïkido : La voie de l'harmonie</p>
-        <p>- Kenko do : La voie de la santé</p>
-        <p>Le tout formant le Toîtsu Do (ou shin shin toïtsu do) : La voie de l'unification</p>
-      </div>
-      <br>
-    </div>
-  </div>
-  <div class="tabs__tab" id="tab_4" data-tab-info>
-    <div class="content">
-      <h1>Informations pratiques</h1>
-      <br>
-      <div class="text">
-        <p>L'instructeur est diplômé du Ki No Kenkyukaï International ou Musubi 5ème Dan.</p>
-        <br>
-        <p><strong><a href="http://www.aikidofonds.org"> Le fond de solidarité</strong></a> :</p>
-        <p>C'est un regroupement de dojos (Allemagne, France, Italie, Suisse) qui mutualisent leurs cotisations pour offrir gratuitement aux adhérents du Fonds de Solidarité un certain nombre de stages en Europe donnés par Bruno Maule (Shihan, 9ème dan) et autres hauts gradés (4ème dan et plus).</p>
-        <p>On peut aussi participer à d'autres stages, qui sont donnés par divers hauts gradés du Ki No Kenkyukaî Musubi.</p>
-        <br>
-        <p>Tous nos adhérents sont automatiquement inscrits à la <a href="https://www.sportspourtous.org/"> Fédération Française Sports pour Tous</a>.</p>
-        <br>
-      </div>
-      <h1>Ki Aïkido à Castelnaudary</h1>
-      <br>
-      <div class="cours">
-        <p>Les cours se déroulent :</p>
-        <p>Le lundi soir, de 20h à 21h45, au Gymnase Pierre de Coubertin, 4 Rue Jacques Anquetil, 11400 Castelnaudary</p>
-        <p>Le jeudi soir, de 20h30 à 22h30, au Complexe Sportif Le Millénaire, Rue Anatole France, 11400 Castelnaudary</p>
-      </div>
-      <br>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.9080198965044!2d1.9462668514023354!3d43.31618487903184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae5a7e24b96c17%3A0x1bc88dd425558d53!2sGymnase%20Pierre%20de%20Coubertin!5e0!3m2!1sfr!2sfr!4v1664031358086!5m2!1sfr!2sfr" width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.6589490670035!2d1.9583712971316694!3d43.32139841260378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae5a9a113da3fd%3A0xb0c31440efeb35f7!2sComplexe%20Sportif%20Le%20Millenaire!5e0!3m2!1sfr!2sfr!4v1664032874426!5m2!1sfr!2sfr" width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <br>
-      <div class="cours">
-        <h2><strong>Tarifs : 210€* / an</strong></h2>
-        <p>* Ce tarif inclut l'inscription à la Fédération Française Sports pour Tous, et prend en charge les frais de participation à l'ensemble des stages du Fonds de Solidarité Européen d'Aïkido donnés par Bruno Maule (Shian) et d'autres hauts gradés (stages à Marseille/Plan d'Aups ainsi que des stages en Italie, Suisse et Allemagne).</p>
-      </div>
-      <br>
-
-    </div>
-  </div>
-
-  <div class="tabs__tab" id="tab_5" data-tab-info>
-    <div class="content">
-      <h1>Articles</h1>
-      <br>
-      <div class="text">
-        <h2>Cette section n'est pas encore disponible, elle sera mise à jour très prochainement</h2>
-      </div>
-      <br>
-    </div>
-  </div>
-  <div class="tabs__tab" id="tab_6" data-tab-info>
-    <div class="content">
-      <h1>Bibliographie</h1>
-      <br>
-      <div class="text">
-        <h2>Cette section n'est pas encore disponible, elle sera mise à jour très prochainement</h2>
-      </div>
-      <br>
-    </div>
-  </div>
-  <div class="tabs__tab" id="tab_7" data-tab-info>
-    <div class="content">
-      <h1>Media</h1>
-      <br>
-      <div class="text">
-        <h2>Cette section n'est pas encore disponible, elle sera mise à jour très prochainement</h2>
-      </div>
-      <br>
-    </div>
+  <div class="but">
+    <p>Promouvoir la pratique du Ki-Aïkido selon l'enseignement du maître Kenjiro Yoshigasaki, élève direct du maître fondateur du Ki-Aïkido : Koïchi Toheï.</p>
+    <br>
+    <p>L'association considère le Ki-Aïkido comme un élément important de l'éducation, de la culture, de la santé publique, de l'intégration et de la participation à la vie sociale.</p>
+    <br>
+    <p>Elle s'interdit toutes discriminations basées notamment sur la race, le sexe, les opinions politiques, philosophiques ou religieuses.</p>
+    <br>
+    <p>Elle s'engage à respecter les droits de l'homme et la liberté d'opinion, et elle s'engage à respecter les règles d'hygiène et de sécurité applicables aux disciplines pratiquées en son sein.</p>
   </div>
 </div>
-<div id="footer">
-  <h4>Nous contacter : <a href="mailto:leduc.vicente@free.fr"><i class="fa-regular fa-envelope"></i></a></h4>
-  <p>Ki Aïkido Castelnaudary (association loi 1901 déclarée sous le nom de Ki Aikido KNKM Sports pour Tous Castelnaudary), dojo fondé en 2022 - mention légales</p>
-</div>
-
-<script type="text/javascript">
-    const tabs = document.querySelectorAll('[data-tab-value]')
-    const tabInfos = document.querySelectorAll('[data-tab-info]')
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = document
-                .querySelector(tab.dataset.tabValue);
-
-            tabInfos.forEach(tabInfo => {
-                tabInfo.classList.remove('active')
-            })
-            target.classList.add('active');
-        })
-    })
-</script>

@@ -1,25 +1,9 @@
 // Import page-specific CSS files here.
-.banner{
-  height: fit-content;
-  text-align:center;
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-color: #0F1B46;
-  padding: 50px 0;
-  color: white;
-  text-shadow: 1px 1px 5px black;
-}
+@import "home";
 
-.banner h2 {
-  color: white;
-  font-size: 50px;
-}
-
-.banner p {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
+.content h1{
+ text-align: center;
+ margin: 0;
 }
 
 .card h2 {
@@ -31,10 +15,10 @@
 }
 
 .container {
-  display: flex;
+  display: grid;
   padding: 16px;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 40px;
   width: 100%;
 }
 
@@ -67,6 +51,32 @@
   margin-right: 200px;
 }
 
+.news {
+  font-size: 14px;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+.news h2 {
+  text-align: center;
+}
+
+.news ul {
+  padding-left: 20px;
+}
+
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .log {
   background-color: lightgray;
   color: lightgray;
@@ -80,85 +90,22 @@
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
-#footer{
-  padding: 30px;
-  background: rgb(30, 30, 30);
-  color: lightgrey;
-}
-
-#footer h4{
-  text-align: center;
-}
-
-#footer p {
-  text-align: center;
-}
-
-#footer a {
-  color: lightgrey;
-  font-size: 15px;
-}
-#footer a:hover {
-  color: white;
-}
-
-[data-tab-info] {
-  display: none;
-}
-
-.active[data-tab-info] {
-  display: block;
-}
-
-.tab-content {
-  margin: 50px;
-  font-size: 25px;
-  font-family: Helvetica;
-  background-color: #FEF6E4;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.tab-content h1 {
-  text-align: center;
-}
-
-.tab-content h2 {
-  text-align: center;
-}
-
-.tabs {
-  font-size: 25px;
-  font-family: Helvetica;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  background: lightgray;
-  border: solid 1px lightgray;
-  padding-right: 70px;
-}
-
-.onglet {
-  background: lightgray;
-  padding: 10px;
-}
-
-.onglet:hover {
-  background: gray;
-  cursor: pointer;
-  color: white;
-}
-
 .content {
   margin-left: 30px;
   grid-area: main;
   display: inline;
+  align-items: center;
+}
+
+.log {
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
 }
 
 .log a{
-  color: lightgray;
-  font-size: 5px;
+  color: whitesmoke;
+  font-size: 20px;
 }
  ul {
   list-style: none;
@@ -170,25 +117,13 @@
   padding-right: 35px;
 }
 
-.card-product {
-  overflow: hidden;
-  height: 269px;
-  display: flex;
-  align-items: center;
-}
-
-.card-product img {
-  height: 100%;
-  width: 188px;
-  object-fit: cover;
-  margin-right: 35px;
-}
-
 .card-product2 {
-  margin-left: 35px;
+  margin-left: 30px;
+  margin-right: 30px;
   overflow: hidden;
-  height: 350px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   align-items: center;
 }
 
@@ -196,59 +131,36 @@
   height: 100%;
   width: 230px;
   object-fit: cover;
-  margin-right: 35px;
 }
 
-.card-product3 {
-  margin-left: 35px;
-  overflow: hidden;
-  height: 269px;
-  display: flex;
-  align-items: center;
+.card-product2 p {
+  font-size: 14px;
+  font-family: Helvetica;
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: justify;
 }
 
-.card-product3 img {
-  height: 100%;
-  width: 188px;
-  object-fit: cover;
-  margin-right: 35px;
+.card-product2 .card-product-infos {
+  padding: 16px;
 }
 
-.card-product4 {
-  margin-left: 35px;
-  overflow: hidden;
-  height: 350px;
-  display: flex;
-  align-items: center;
+@media(max-width: 768px) {
+  .card-product2 {
+    grid-template-columns: 1fr;
+  }
 }
 
-.card-product4 img {
-  height: 100%;
-  width: 230px;
-  object-fit: cover;
-  margin-right: 35px;
+.but {
+  margin-bottom: 35px;
 }
 
-.card-product-infos {
-  padding-bottom: 50px;
-  margin-right: 30px;
-}
-
-.card-product-infos p {
+.but p{
   margin-left: 30px;
-}
-
-.map {
-  display: flex;
-  justify-content: space-around;
-}
-
-.cours {
-  text-align: center;
-  margin: 35px;
-}
-
-iframe {
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-right: 30px;
+  font-size: 14px;
+  font-family: Helvetica;
+  line-height: 1.4;
+  text-align: justify;
 }
