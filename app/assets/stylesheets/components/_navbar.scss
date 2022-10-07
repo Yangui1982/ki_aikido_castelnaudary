@@ -10,6 +10,12 @@
   margin-bottom: 0px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
  }
+
+.navbar a {
+  text-decoration: none;
+  color: grey;
+}
+
  .nav-links a {
   color: grey;
   text-decoration: none;
@@ -23,6 +29,7 @@
   display: flex;
   align-items: center;
   width: 200px;
+  font-size: 22px;
 }
 
  /* NAVBAR MENU */
@@ -108,10 +115,8 @@ input[type=checkbox]{
   .hamburger {
     display: block;
   }
-  .dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
+  .logo {
+    font-size: 18px;
   }
   // .dropdown li:hover {
   //   background-color: #fffbf1;

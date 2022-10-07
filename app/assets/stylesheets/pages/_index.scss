@@ -1,9 +1,28 @@
 // Import page-specific CSS files here.
 @import "home";
 
+.content {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #FEF6E4;
+  border-radius: 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .content h1{
  text-align: center;
  margin: 0;
+}
+
+@media(max-width: 768px) {
+  .content {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+  }
 }
 
 .card h2 {
@@ -22,11 +41,18 @@
   width: 100%;
 }
 
+@media(max-width: 768px) {
+  .container {
+    padding: 0px;
+    margin-top: 20px;
+  }
+}
+
 .cards {
   width: 100%;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
 }
@@ -77,12 +103,6 @@
   }
 }
 
-.log {
-  background-color: lightgray;
-  color: lightgray;
-  width: 5px;
-}
-
 .img_card {
   background-size: cover;
   background-position: bottom;
@@ -90,21 +110,24 @@
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
-.content {
-  margin-left: 30px;
-  grid-area: main;
-  display: inline;
-  align-items: center;
-}
+// .content {
+//   margin-left: 30px;
+//   grid-area: main;
+//   display: inline;
+//   align-items: center;
+// }
 
 .log {
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
-  background-color: whitesmoke;
+  background-color: #FEF6E4;
+  color: #FEF6E4;
+  width: 5px;
 }
 
 .log a{
-  color: whitesmoke;
+  color: #FEF6E4;
   font-size: 20px;
 }
  ul {
