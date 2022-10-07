@@ -11,6 +11,10 @@
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
  }
 
+.navbar p{
+  display: none;
+}
+
 .navbar a {
   text-decoration: none;
   color: grey;
@@ -87,8 +91,10 @@ input[type=checkbox]{
  /*HAMBURGER MENU*/
  .hamburger {
   display: none;
-  font-size: 25px;
+  font-size: 30px;
   user-select: none;
+  // font-weight: lighter ;
+  margin-top: 10px;
  }
  /* APPLYING MEDIA QUERIES */
  @media (max-width: 768px) {
@@ -113,10 +119,16 @@ input[type=checkbox]{
     display: block;
   }
   .hamburger {
+    margin-bottom: 0;
     display: block;
+    text-align: center;
   }
-  .logo {
-    font-size: 18px;
+  .navbar p{
+    display: contents;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .logo h1{
+    font-size: 20px;
   }
   // .dropdown li:hover {
   //   background-color: #fffbf1;

@@ -1,3 +1,25 @@
+.content4 {
+  padding-top: 5px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #FEF6E4;
+  border-radius: 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.content4 h1 {
+  text-align: center;
+}
+@media(max-width: 768px) {
+  .content4 {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+  }
+}
+
 .card-product {
   margin-left: 30px;
   margin-right: 30px;

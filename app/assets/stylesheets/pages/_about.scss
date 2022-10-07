@@ -1,3 +1,14 @@
+.content2 {
+  padding-top: 5px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #FEF6E4;
+  border-radius: 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .content2 h1 {
   text-align: center;
 }
@@ -8,6 +19,15 @@
   line-height: 1.4;
   text-align: justify;
   margin: 15px;
+}
+
+@media(max-width: 768px) {
+  .content2 {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+  }
 }
 
 .text2 {
