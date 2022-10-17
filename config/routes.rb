@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "enseignement", to: "pages#enseignement"
   get "bibliographie", to: "pages#bibliographie"
   get "articles", to: "pages#articles"
+  get "dojos", to: "pages#dojos"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
