@@ -11,6 +11,16 @@
 .content3 h1 {
   text-align: center;
 }
+
+@media(max-width: 1076px) {
+  .content3 {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+  }
+}
+
 @media(max-width: 768px) {
   .content3 {
     margin-top: 10px;
@@ -112,5 +122,16 @@ iframe {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 320px;
     height: 235px;
+  }
+}
+@media(max-width: 320px) {
+  .map {
+    width: 290px;
+  }
+  iframe {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 290px;
+    height: 205px;
   }
 }
