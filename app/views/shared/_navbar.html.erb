@@ -1,4 +1,7 @@
 <nav class="navbar">
+ <div class="navbar-items">
+
+
   <!-- LOGO -->
   <%= link_to root_path do %>
     <div class="logo">
@@ -7,6 +10,7 @@
     </div>
   <% end %>
   <!-- NAVIGATION MENU -->
+
   <ul class="nav-links">
     <!-- USING CHECKBOX HACK -->
     <input type="checkbox" id="checkbox_toggle" />
@@ -25,4 +29,5 @@
       <li><%= link_to 'Media', media_path %></li>
     </div>
   </ul>
+ </div>
 </nav>
