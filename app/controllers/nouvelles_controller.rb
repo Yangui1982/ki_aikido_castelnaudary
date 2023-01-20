@@ -17,7 +17,7 @@ class NouvellesController < ApplicationController
     @nouvelle = Nouvelle.new(nouvelle_params)
     @nouvelle.user = current_user
     if @nouvelle.save
-      redirect_to nouvelles_path
+      redirect_to root_path
     else
       render :new
     end
@@ -26,13 +26,13 @@ class NouvellesController < ApplicationController
 
   def update
     @nouvelle.update(nouvelle_params)
-    redirect_to nouvelles_path
+    redirect_to root_path
     authorize @nouvelle
   end
 
   def destroy
     @nouvelle.destroy
-    redirect_to nouvelles_path
+    redirect_to root_path
     authorize @nouvelle
   end
 
@@ -43,6 +43,6 @@ class NouvellesController < ApplicationController
   end
 
   def nouvelle_params
-    params.require(:nouvelle).permit(:comment, :user)
+    params.require(:nouvelle).permit(:comment, :user, :content)
   end
 end

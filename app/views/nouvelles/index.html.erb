@@ -53,7 +53,7 @@
       <% @nouvelles.each do |nouvelle| %>
       <li><%= nouvelle.created_at.strftime("%d-%m-%Y")  %>
           <%= ': ' %>
-          <%= nouvelle.comment %>
+          <%= nouvelle.content %>
           <% if policy(nouvelle).destroy? %>
             <%= link_to nouvelle_path(nouvelle), class: 'trash',
               method: :delete,
