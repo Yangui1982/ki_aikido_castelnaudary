@@ -118,7 +118,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jquery (0.0.1)
     json (2.6.3)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -267,7 +266,6 @@ DEPENDENCIES
   font-awesome-sass (~> 5.6.1)
   importmap-rails (~> 1.1)
   jbuilder (~> 2.7)
-  jquery
   listen (~> 3.3)
   pg (~> 1.1)
   pry-byebug
