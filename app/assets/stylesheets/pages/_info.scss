@@ -29,6 +29,10 @@
     border-radius: 15px;
   }
 }
+.instructor {
+  display: flex;
+  justify-content: center;
+}
 .maps {
   display: grid;
   grid-template-columns: 1fr;
@@ -80,13 +84,13 @@ iframe {
   height: 100%;
   width: 230px;
   object-fit: cover;
-  justify-self: end;
+  justify-self:center;
 }
 
 .card-product6 p {
-  padding-right: 200px;
   font-size: 14px;
   font-family: Helvetica;
+  padding-right: 50px;
   line-height: 1.4;
   margin-bottom: 0;
   margin: 5px;
