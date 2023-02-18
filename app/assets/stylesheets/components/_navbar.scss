@@ -5,6 +5,7 @@
   color: grey;
   margin-bottom: 0px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  width: 100%;
  }
 
 .navbar p{
@@ -38,6 +39,13 @@
   justify-content: center;
   align-items: center;
   width: 550px;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.logo h1 {
   font-size: 22px;
 }
 
@@ -140,4 +148,24 @@ margin-top: 10px;
   .logo h1{
     font-size: 20px;
   }
+}
+
+@media(max-width: 280px) {
+  .logo {
+    width: 200px;
+    justify-content: left;
+    font-size: 15px;
+  }
+  .logo img{
+    width: 70px;
+  }
+
+  .nav-links {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-items {
+    display: flex;
+   }
 }
