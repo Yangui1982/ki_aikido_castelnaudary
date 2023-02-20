@@ -6,9 +6,9 @@
   margin-bottom: 10px;
   margin-left: 20%;
   margin-right: 20%;
-  background-color: #FEF6E4;
-  border-radius: 25px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .content h1{
@@ -21,7 +21,8 @@
     margin-top: 30px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 20px;
+    border-radius: 10px;
+    width: auto;
   }
 }
 
@@ -30,14 +31,14 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 }
 
 @media(max-width: 280px) {
   .content {
     margin-top: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -141,13 +142,13 @@
   margin-left: 20px;
   display: flex;
   flex-direction: row;
-  background-color: #FEF6E4;
-  color: #FEF6E4;
+  background-color: whitesmoke;
+  color: whitesmoke;
   width: 5px;
 }
 
 .log a{
-  color: #FEF6E4;
+  color: whitesmoke;
   font-size: 20px;
 }
  ul {

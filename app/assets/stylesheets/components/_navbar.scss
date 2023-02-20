@@ -1,10 +1,10 @@
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #FEF6E4;
+  background-color: whitesmoke;
   color: grey;
   margin-bottom: 0px;
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   width: 100%;
  }
 
@@ -74,7 +74,7 @@ text-decoration: none;
 position: relative;
 }
 .dropdown {
-background-color: #FEF6E4;
+background-color: whitesmoke;
 padding: 1em 0;
 position: absolute;
 display: none;
@@ -90,7 +90,7 @@ width: 8em;
 text-align: center;
 }
 .dropdown li:hover {
-background-color: #fffbf1;
+background-color: white;
 }
 .nav-links a:hover {
 color: black;
@@ -115,7 +115,7 @@ margin-top: 10px;
   .menu {
     display:none;
     position: absolute;
-    background-color: #FEF6E4;
+    background-color: whitesmoke;
     right: 0;
     left: 0;
     text-align: center;
@@ -123,7 +123,7 @@ margin-top: 10px;
   }
   .menu li:hover {
     display: inline-block;
-    background-color: #fffbf1;
+    background-color: white;
     transition: 0.3s ease;
   }
   .menu li + li {
