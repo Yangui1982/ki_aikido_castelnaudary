@@ -25,7 +25,8 @@
  ul {
   list-style: none;
   align-self: center;
- }
+  text-align: center;
+}
 
 .title {
   display: flex;
@@ -46,7 +47,7 @@
 }
 
 .logo h1 {
-  font-size: 22px;
+  font-size: 36px;
 }
 
 .onglets {

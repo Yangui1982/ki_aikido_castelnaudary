@@ -7,7 +7,7 @@
     <p>Un peu d'histoire :</p>
   </div>
   <div class="card-product3">
-    <img src=<%= asset_path('tohei2.png')%> alt="Toheï et Ueshiba" width="189" class="img_card"/>
+    <%= cl_image_tag("tohei2_ayzima", version: 1676885339, width: 189, class: "img_card", alt:"Toheï et Ueshiba") %>
     <div class="card-product-infos3">
       <p><strong>Koïchi Toheï (debout) avec Maître Ueshiba</strong></p>
     </div>
@@ -20,7 +20,7 @@
   </div>
     <br>
   <div class="card-product4">
-    <img src=<%= asset_path('Yoshigasaki-Kenjiro-01.jpg')%> alt="yoshigasaki senseï" width="189" class="img_card"/>
+    <%= cl_image_tag("Yoshigasaki-Kenjiro-01_uzp0mg", version: 1676885339, width: 189, class: "img_card", alt:"Yoshigasaki Senseï") %>
     <div class="card-product-infos4">
       <p><strong>Maître Yoshigasaki</strong></p>
     </div>
