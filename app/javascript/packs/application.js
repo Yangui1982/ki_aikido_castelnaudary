@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 //= require jquery
-//= require rails_emoji_picker
 //= require_tree .
 
 import Rails from "@rails/ujs"
@@ -18,6 +17,3 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
-
-require("trix")
-require("@rails/actiontext")
