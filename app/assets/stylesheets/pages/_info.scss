@@ -1,11 +1,8 @@
 .content3 {
-  padding-top: 6px;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  padding-top: 45px;
   margin-left: 20%;
   margin-right: 20%;
-  background-color: whitesmoke;
-  border-radius: 15px;
+  background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .content3 h1 {
@@ -14,19 +11,17 @@
 
 @media(max-width: 1076px) {
   .content3 {
-    margin-top: 30px;
+    padding-top: 35px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 20px;
   }
 }
 
 @media(max-width: 768px) {
   .content3 {
-    margin-top: 10px;
+    padding-top: 15px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 15px;
   }
 }
 .instructor {

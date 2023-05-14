@@ -16,11 +16,14 @@
 @import "pages/enseignement";
 @import "pages/dojos";
 @import "pages/media";
+@import "pages/new";
 
 body {
-  background-color: white;
+  background-color: whitesmoke;
   margin: 0px 0 0 0;
-  display: block;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .warning {
