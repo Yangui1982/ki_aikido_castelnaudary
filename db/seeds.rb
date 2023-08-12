@@ -9,6 +9,6 @@
 User.destroy_all
 
 User.create!(
-  email: 'admin@admin.com',
-  password: 'T1r2u3s4t5n6o718!'
+  email: 'leduc.vicente@free.fr',
+  password: 'jeangab11'
 )

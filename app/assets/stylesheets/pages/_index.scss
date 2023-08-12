@@ -10,12 +10,12 @@
 }
  button {
   border: none;
-  color: whitesmoke;
+  color: black;
   background-color: whitesmoke;
  }
 
 .logout{
-  color: whitesmoke;
+  color: black;
 }
 .content h1{
  text-align: center;
@@ -80,15 +80,6 @@
   background-position: bottom;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-}
-
-.log {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: row;
-  background-color: whitesmoke;
-  color: whitesmoke;
-  width: 5px;
 }
 
 .log a{
