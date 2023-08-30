@@ -63,7 +63,6 @@
 .news {
   font-size: 14px;
   font-family: Helvetica;
-  text-align: center;
 }
 
 .news h2 {
@@ -89,11 +88,20 @@
  ul {
   list-style: none;
   padding-right: 20px;
+  text-align: justify !important;
  }
 
  .text {
   padding-left: 35px;
   padding-right: 35px;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+}
+.add a {
+  text-decoration: none;
 }
 
 .card-product2 {
