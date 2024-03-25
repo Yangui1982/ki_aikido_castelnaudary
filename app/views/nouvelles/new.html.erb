@@ -5,7 +5,8 @@
   <br>
   <%= simple_form_for(@nouvelle) do |f| %>
     <div class="field">
-      <%= f.input :content, label: "Contenu", type: "text" %>
+      <%= f.label :content, 'Contenu' %>
+      <%= f.rich_text_area :content, type: "text" %>
     </div>
     <br>
     <br>
@@ -13,8 +14,6 @@
       <%= f.submit 'Sauvegarder la News', class:'bnt btn-primary' %>
     </div>
   <% end %>
-
-
   <br>
   <br>
   <br>

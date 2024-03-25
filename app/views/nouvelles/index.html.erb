@@ -48,7 +48,7 @@
         <% @nouvelles.each do |nouvelle| %>
         <li><%= nouvelle.content %>
             <% if policy(nouvelle).destroy? %>
-              <%= link_to nouvelle_path(nouvelle), class: 'trash',
+              <%= button_to nouvelle_path(nouvelle), class: 'trash',
                 method: :delete,
                 data: { confirm: "Are you sure?" } do%>
                 <i class="fa-regular fa-trash-can"></i>
@@ -65,15 +65,16 @@
         <% end %>
       </div>
       <% end %>
-      <br>
-      <div class="card-product2">
-        <%= cl_image_tag("ki_yyjes9", version: 1676885338, width: 189, class:"img_card", alt: "Aïkido") %>
-        <div class="card-product-infos">
-          <p>Shinshin Toïtsu Aïkido avec coordination de l'esprit et du corps, plus simplement nommé : Ki Aïkido (Ecole fondée par Maître Koïchi Toheï)</p>
-        </div>
-      </div>
-      <br>
     </div>
+    <br>
+    <div class="card-product2">
+      <%= cl_image_tag("ki_yyjes9", version: 1676885338, width: 189, class:"img_card", alt: "Aïkido") %>
+      <div class="card-product-infos">
+        <p>Shinshin Toïtsu Aïkido avec coordination de l'esprit et du corps, plus simplement nommé : Ki-Aïkido (Ecole fondée par Maître Koïchi Toheï)</p>
+      </div>
+    </div>
+    <br>
+    <br>
     <div class="but">
       <p>Promouvoir la pratique du Ki-Aïkido selon l'enseignement du Maître Kenjiro Yoshigasaki, élève direct du Maître fondateur du Ki-Aïkido : Koïchi Toheï.</p>
       <br>

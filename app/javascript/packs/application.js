@@ -17,3 +17,6 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+import "stylesheets/trix"
+import "@rails/actiontext"
+
